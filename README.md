@@ -9,10 +9,11 @@ Frontend-only portfolio site built with React, TypeScript, Vite, and Tailwind CS
 
 ## Setup
 
-Clone or download the project, then install dependencies:
+Clone the repository, then install dependencies:
 
 ```bash
-cd portfolio
+git clone https://github.com/edennegussie/edennegussie.github.io.git
+cd edennegussie.github.io
 npm install
 ```
 
@@ -54,6 +55,35 @@ public/         # Static assets (CV PDF, screenshots, favicon)
 
 To update copy or project details, edit `src/data.ts`.
 
-## Deploy
+## Deploy to GitHub Pages
 
-After `npm run build`, deploy the contents of `dist/` to any static host (Vercel, Netlify, GitHub Pages, etc.).
+Repository: [edennegussie/edennegussie.github.io](https://github.com/edennegussie/edennegussie.github.io)
+
+Live site: **https://edennegussie.github.io**
+
+### Automatic deploy (recommended)
+
+1. On GitHub, open **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Push to the `main` branch. The workflow in `.github/workflows/deploy.yml` builds and deploys the site.
+
+You can also run the workflow manually from the **Actions** tab.
+
+### Manual deploy
+
+```bash
+npm run deploy
+```
+
+This builds the site and publishes `dist/` with the `gh-pages` package.
+
+### CV PDF on the live site
+
+PDF files are gitignored locally. To include your CV on the deployed site, either:
+
+- place `CV_Eden_SoftwareDeveloper.pdf` in `public/` before pushing (and temporarily allow it in git), or
+- host the PDF elsewhere and update `cvUrl` in `src/data.ts`.
+
+## Deploy elsewhere
+
+After `npm run build`, deploy the contents of `dist/` to any static host (Vercel, Netlify, etc.).
