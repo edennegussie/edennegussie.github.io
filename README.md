@@ -29,7 +29,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## Production build
 
-Build optimized static files into the `dist/` folder:
+Build optimized static files into the `docs/` folder:
 
 ```bash
 npm run build
@@ -61,21 +61,30 @@ Repository: [edennegussie/edennegussie.github.io](https://github.com/edennegussi
 
 Live site: **https://edennegussie.github.io**
 
-### Automatic deploy (recommended)
+The production build outputs to the `docs/` folder (not `dist/`).
 
-1. On GitHub, open **Settings → Pages**.
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-3. Push to the `main` branch. The workflow in `.github/workflows/deploy.yml` builds and deploys the site.
+### Setup on GitHub
 
-You can also run the workflow manually from the **Actions** tab.
+1. Open **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+3. Choose branch **main** and folder **/docs**.
 
-### Manual deploy
+### Publish updates
+
+```bash
+npm run build
+git add docs/
+git commit -m "Update site build"
+git push
+```
+
+Or use the shortcut:
 
 ```bash
 npm run deploy
 ```
 
-This builds the site and publishes `dist/` with the `gh-pages` package.
+Then commit and push the updated `docs/` folder.
 
 ### CV PDF on the live site
 
@@ -86,4 +95,4 @@ PDF files are gitignored locally. To include your CV on the deployed site, eithe
 
 ## Deploy elsewhere
 
-After `npm run build`, deploy the contents of `dist/` to any static host (Vercel, Netlify, etc.).
+After `npm run build`, deploy the contents of `docs/` to any static host (Vercel, Netlify, etc.).

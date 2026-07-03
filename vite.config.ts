@@ -5,5 +5,9 @@ import tailwindcss from "@tailwindcss/vite";
 // User site (edennegussie.github.io) is served from the domain root.
 export default defineConfig({
   base: "/",
+  build: {
+    outDir: "docs",
+    emptyOutDir: true,
+  },
   plugins: [react(), tailwindcss()],
 });
