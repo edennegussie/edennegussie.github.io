@@ -5,23 +5,14 @@ type SectionHeadingProps = {
 };
 
 export default function SectionHeading({
-  eyebrow,
   title,
-  description,
 }: SectionHeadingProps) {
   return (
-    <div className="mb-12 max-w-2xl">
-      <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-teal-600 dark:text-teal-400">
-        {eyebrow}
-      </p>
-      <h2 className="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+    <div className="mb-10">
+      <h2 className="font-display bg-gradient-to-r from-teal-600 via-purple-600 to-orange-500 bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-4xl">
         {title}
       </h2>
-      {description && (
-        <p className="mt-4 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
-          {description}
-        </p>
-      )}
+      <div className="mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500" />
     </div>
   );
 }

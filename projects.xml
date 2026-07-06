@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<indexing>
+ <paragraph index="9" node_type="writer">Projects</paragraph>
+ <paragraph index="10" node_type="writer">Project: Worldlink</paragraph>
+ <paragraph index="11" node_type="writer">Description: an M&amp;E &amp; GMS app used for donor and award management, data collection, and progress tracking of field programs.</paragraph>
+ <paragraph index="12" node_type="writer">Tech Stack: JS, Angular, AngularJS, PHP, Laravel, MySQL, PostgreSQL, Jasmine (unit testing), Docker, Azure App Services, RESTful APIs, Bitbucket Pipelines (CI/CD)</paragraph>
+ <paragraph index="13" node_type="writer">Project: Ecosystem</paragraph>
+ <paragraph index="14" node_type="writer">Description: an application for household and children-under-sponsorship management.</paragraph>
+ <paragraph index="15" node_type="writer">Tech Stack: React, .NET Core, C#, Entity Framework Core, AWS (EC2/S3), REST APIs, Figma (UI/UX design)</paragraph>
+ <paragraph index="16" node_type="writer">Project: AiQA</paragraph>
+ <paragraph index="17" node_type="writer">Description: an AI-powered QA application that reviews letters and cards written by sponsored children to their sponsors; integrates Playwright for browser automation and OpenAI for content validation, running the full set of QA checks and approving submissions without human intervention.</paragraph>
+ <paragraph index="18" node_type="writer">Tech Stack: Playwright, OpenAI API (GPT-4), Node.js/TypeScript, Prompt Engineering</paragraph>
+ <paragraph index="19" node_type="writer">Project: Vision</paragraph>
+ <paragraph index="20" node_type="writer">Description: a software tool that utilizes AI (Azure Computer Vision) for face and body recognition, and performs automatic processing of child photos from field offices to reposition and align them according to the org standards.</paragraph>
+ <paragraph index="21" node_type="writer">Tech Stack: Pug, jQuery, Node.js, Express, MSSQL, Axios, Mocha, Chai, Azure Computer Vision API, Docker</paragraph>
+ <paragraph index="22" node_type="writer">Project: OVAS</paragraph>
+ <paragraph index="23" node_type="writer">Description: a volunteer management platform designed for FH staff to register and manage volunteers who do not have email addresses; it allows assigning unique IDs, linking with devices, and generating scannable badges.</paragraph>
+ <paragraph index="24" node_type="writer">Tech Stack: React, TypeScript, Tailwind CSS, React Query, React Router, QR/barcode generation library, REST APIs</paragraph>
+ <paragraph index="25" node_type="writer">Project: ExportEd</paragraph>
+ <paragraph index="26" node_type="writer">Description: a custom standalone Node.js middleware which listens to platform events from Salesforce, runs a SOQL-based ETL process, generates zipped CSV outputs, and writes processed data back to Salesforce.</paragraph>
+ <paragraph index="27" node_type="writer">Tech Stack: Node.js, Salesforce Platform Events, SOQL, Salesforce REST/Bulk API, JSZip, Cron scheduling</paragraph>
+ <paragraph index="28" node_type="writer">Project: Salesforce CRM</paragraph>
+ <paragraph index="29" node_type="writer">Description: CRM used to manage sponsors, children, sponsorships, and donations, enabling tracking and dynamic association between sponsors and beneficiaries.</paragraph>
+ <paragraph index="30" node_type="writer">Tech Stack: Apex, Lightning Web Components (LWC), SOQL, Batching tool, Salesforce Flow, Salesforce Data Loader</paragraph>
+</indexing>

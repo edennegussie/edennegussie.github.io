@@ -84,64 +84,105 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: "AiQA",
-    tagline: "AI-powered QA agent for sponsor correspondence",
+    name: "Worldlink",
+    tagline: "M&E and GMS platform",
     description:
-      "An automation tool that reviews letters and cards from sponsored children to their sponsors. Playwright drives the browser workflow while OpenAI validates each item against quality rules, processing around 300 reviews per run with no manual intervention.",
-    tags: ["OpenAI", "Playwright", "TypeScript", "Node.js", "Automation"],
-    metric: "~300 reviews per run, fully automated",
+      "An M&E and GMS app used for donor and award management, data collection, and progress tracking of field programs.",
+    tags: [
+      "JavaScript",
+      "Angular",
+      "AngularJS",
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "PostgreSQL",
+      "Jasmine",
+      "Docker",
+      "Azure App Services",
+      "RESTful APIs",
+      "Bitbucket Pipelines",
+    ],
+    link: "https://wl3.fh.org/",
+  },
+  {
+    name: "Ecosystem",
+    tagline: "Household and sponsorship management",
+    description:
+      "An application for household and children-under-sponsorship management.",
+    tags: [
+      "React",
+      ".NET Core",
+      "C#",
+      "Entity Framework Core",
+      "AWS EC2",
+      "AWS S3",
+      "REST APIs",
+      "Figma",
+    ],
+  },
+  {
+    name: "AiQA",
+    tagline: "AI-powered QA for sponsor correspondence",
+    description:
+      "An AI-powered QA application that reviews letters and cards written by sponsored children to their sponsors. It integrates Playwright for browser automation and OpenAI for content validation, running the full set of QA checks and approving submissions without human intervention.",
+    tags: ["Playwright", "OpenAI API (GPT-4)", "Node.js", "TypeScript", "Prompt Engineering"],
     ai: true,
   },
   {
     name: "Vision",
     tagline: "AI photo processing for field offices",
     description:
-      "A tool that uses Azure Computer Vision for face and body recognition to automatically process child photos from field offices, repositioning and aligning them to the organization's standards.",
-    tags: ["Node.js", "Express", "Azure AI", "MSSQL", "Docker"],
-    metric: "Automated image-processing workflows",
+      "A software tool that utilizes AI (Azure Computer Vision) for face and body recognition, and performs automatic processing of child photos from field offices to reposition and align them according to the organization standards.",
+    tags: [
+      "Pug",
+      "jQuery",
+      "Node.js",
+      "Express",
+      "MSSQL",
+      "Axios",
+      "Mocha",
+      "Chai",
+      "Azure Computer Vision API",
+      "Docker",
+    ],
     link: "https://vision.fh.org/",
     ai: true,
-  },
-  {
-    name: "ExportEd",
-    tagline: "Salesforce ETL middleware",
-    description:
-      "A custom standalone Node.js middleware that listens to Salesforce Platform Events, runs SOQL-based ETL, generates zipped CSV outputs, and writes processed data back to Salesforce, replacing a Boomi-managed process.",
-    tags: ["Node.js", "SOQL", "Salesforce", "ETL"],
-    metric: "Over $10,000 saved per year",
-  },
-  {
-    name: "Worldlink (wl3)",
-    tagline: "M&E and grants management (GMS)",
-    description:
-      "An M&E and GMS app used for donor and award management, data collection, and progress tracking of field programs. I helped build a single source of truth for grants and improved loading speed through caching and lazy loading.",
-    tags: ["Angular", "PHP", "Laravel", "PostgreSQL", "Power BI"],
-    metric: "Single source of truth for grants",
-    link: "https://wl3.fh.org/",
-  },
-  {
-    name: "eRIS",
-    tagline: "External relations information system",
-    description:
-      "Full-stack work on eRIS, an enterprise external relations platform built alongside the M&E and GMS suite. It supports field data capture, program reporting, and external relations workflows.",
-    tags: ["Angular", "PHP", "Laravel", "PostgreSQL", "Full-Stack"],
-    metric: "Part of the M&E, GMS & eRIS suite",
   },
   {
     name: "OVAS",
     tagline: "Volunteer management platform",
     description:
-      "A volunteer management platform for staff to register and manage volunteers without email addresses, assigning unique IDs, linking devices, and generating scannable badges.",
-    tags: ["React", "TypeScript", "React Query", "Tailwind"],
-    metric: "Scannable badges for field volunteers",
+      "A volunteer management platform designed for FH staff to register and manage volunteers who do not have email addresses. It allows assigning unique IDs, linking with devices, and generating scannable badges.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Query",
+      "React Router",
+      "QR/barcode generation library",
+      "REST APIs",
+    ],
   },
   {
-    name: "FH Salesforce CRM",
+    name: "ExportEd",
+    tagline: "Salesforce ETL middleware",
+    description:
+      "A custom standalone Node.js middleware which listens to platform events from Salesforce, runs a SOQL-based ETL process, generates zipped CSV outputs, and writes processed data back to Salesforce.",
+    tags: ["Node.js", "Salesforce Platform Events", "SOQL", "Salesforce REST/Bulk API", "JSZip", "Cron scheduling"],
+  },
+  {
+    name: "Salesforce CRM",
     tagline: "Sponsorship and donation management",
     description:
-      "Salesforce CRM solutions to manage sponsors, children, sponsorships, and donations, with dynamic associations between sponsors and beneficiaries. Delivered through Apex and Lightning Web Components.",
-    tags: ["Apex", "LWC", "SOQL"],
-    metric: "Sponsor and beneficiary tracking",
+      "CRM used to manage sponsors, children, sponsorships, and donations, enabling tracking and dynamic association between sponsors and beneficiaries.",
+    tags: [
+      "Apex",
+      "Lightning Web Components (LWC)",
+      "SOQL",
+      "Batching tool",
+      "Salesforce Flow",
+      "Salesforce Data Loader",
+    ],
   },
 ];
 
@@ -161,7 +202,7 @@ export const experiences: Experience[] = [
     sector: "International NGO",
     period: "Apr 2019 to Present",
     points: [
-      "Develop, maintain, and deploy enterprise web applications (Worldlink, eRIS, OVAS, Vision), including new features, UX improvements, troubleshooting, and bug fixes.",
+      "Develop, maintain, and deploy enterprise web applications (Worldlink, OVAS, Vision), including new features, UX improvements, troubleshooting, and bug fixes.",
       "Built ExportEd, a custom Salesforce ETL middleware that saved the organization over $10,000 per year.",
       "Built AiQA, an AI-powered QA agent using Playwright and OpenAI to automate review of sponsor correspondence.",
       "Ensured accurate and reliable Sponsorship, Child, and Media data by validating datasets, resolving discrepancies, and running daily synchronization across three platforms.",

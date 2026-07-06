@@ -1,4 +1,4 @@
-import { Linkedin, Mail, Phone } from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone, User } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { profile } from "../data";
@@ -12,54 +12,78 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Contact"
-          title="Let's build something that matters"
-          description="Whether it's social-impact tech or a new domain I haven't touched yet, I'd love to hear what you're working on."
+          title="Contact"
         />
 
         <Reveal>
-          <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-teal-50 via-white to-purple-50 p-8 sm:p-12 dark:border-slate-800 dark:from-teal-950/30 dark:via-slate-900 dark:to-purple-950/30">
-            <p className="max-w-xl text-lg text-slate-600 dark:text-slate-400">
-              I'm open to full-stack and software engineering roles. My heart is in
-              social-impact work, and I'm equally excited to explore new sectors and
-              AI-driven products where thoughtful engineering makes a difference.
-            </p>
+          <dl className="space-y-3">
+            <div className="grid gap-1 sm:grid-cols-[180px_1fr] sm:gap-8">
+              <dt className="flex items-center gap-2 text-sm font-semibold text-purple-600 dark:text-purple-400">
+                <User size={16} />
+                Name
+              </dt>
+              <dd className="text-sm leading-normal text-slate-700 dark:text-slate-300">
+                {profile.name}
+              </dd>
+            </div>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <a
-                href={`mailto:${profile.email}`}
-                className="inline-flex items-center gap-3 rounded-xl bg-teal-500 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-teal-600"
-              >
-                <Mail size={18} />
-                {profile.email}
-              </a>
-              <a
-                href={`tel:${profile.phone.replace(/\s/g, "")}`}
-                className="inline-flex items-center gap-3 rounded-xl border border-slate-300 bg-white px-6 py-3.5 text-sm font-semibold text-slate-800 transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
-              >
-                <Phone size={18} />
-                {profile.phone}
-              </a>
-              <a
-                href={profile.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-xl border border-slate-300 bg-white px-6 py-3.5 text-sm font-semibold text-slate-800 transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
-              >
-                <Linkedin size={18} />
+            <div className="grid gap-1 sm:grid-cols-[180px_1fr] sm:gap-8">
+              <dt className="flex items-center gap-2 text-sm font-semibold text-purple-600 dark:text-purple-400">
+                <MapPin size={16} />
+                Address
+              </dt>
+              <dd className="text-sm leading-normal text-slate-700 dark:text-slate-300">
+                {profile.location}
+              </dd>
+            </div>
+
+            <div className="grid gap-1 sm:grid-cols-[180px_1fr] sm:gap-8">
+              <dt className="flex items-center gap-2 text-sm font-semibold text-purple-600 dark:text-purple-400">
+                <Phone size={16} />
+                Phone
+              </dt>
+              <dd className="text-sm leading-normal">
+                <a
+                  href={`tel:${profile.phone.replace(/\s/g, "")}`}
+                  className="text-slate-700 underline-offset-4 hover:text-teal-600 hover:underline dark:text-slate-300 dark:hover:text-teal-400"
+                >
+                  {profile.phone}
+                </a>
+              </dd>
+            </div>
+
+            <div className="grid gap-1 sm:grid-cols-[180px_1fr] sm:gap-8">
+              <dt className="flex items-center gap-2 text-sm font-semibold text-purple-600 dark:text-purple-400">
+                <Mail size={16} />
+                Email
+              </dt>
+              <dd className="text-sm leading-normal">
+                <a
+                  href={`mailto:${profile.email}`}
+                  className="text-slate-700 underline-offset-4 hover:text-teal-600 hover:underline dark:text-slate-300 dark:hover:text-teal-400"
+                >
+                  {profile.email}
+                </a>
+              </dd>
+            </div>
+
+            <div className="grid gap-1 sm:grid-cols-[180px_1fr] sm:gap-8">
+              <dt className="flex items-center gap-2 text-sm font-semibold text-purple-600 dark:text-purple-400">
+                <Linkedin size={16} />
                 LinkedIn
-              </a>
+              </dt>
+              <dd className="text-sm leading-normal">
+                <a
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-700 underline-offset-4 hover:text-teal-600 hover:underline dark:text-slate-300 dark:hover:text-teal-400"
+                >
+                  {profile.linkedin}
+                </a>
+              </dd>
             </div>
-
-            <div className="mt-8">
-              <a
-                href={profile.cvUrl}
-                download
-                className="text-sm font-semibold text-teal-600 underline-offset-4 hover:underline dark:text-teal-400"
-              >
-                Download full CV (PDF)
-              </a>
-            </div>
-          </div>
+          </dl>
         </Reveal>
       </div>
     </section>

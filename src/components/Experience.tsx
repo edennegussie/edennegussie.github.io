@@ -11,7 +11,7 @@ export default function Experience() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Experience"
-          title="Where I've built"
+          title="Experience"
           description="Over 8 years across NGOs, consultancies, and R&D, building and maintaining production web applications."
         />
 

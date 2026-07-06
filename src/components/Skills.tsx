@@ -8,7 +8,7 @@ export default function Skills() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Skills"
-          title="Tech stack"
+          title="Technical Skills"
           description="Languages, frameworks, and tools I use in my day-to-day development work."
         />
 
