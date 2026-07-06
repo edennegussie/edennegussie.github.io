@@ -90,7 +90,7 @@ Then commit and push the updated `docs/` folder.
 
 PDF files are gitignored locally. To include your CV on the deployed site, either:
 
-- place `CV_Eden_SoftwareDeveloper.pdf` in `public/` before pushing (and temporarily allow it in git), or
+- place `EdenCV.pdf` in `public/` before building (and temporarily allow it in git), or
 - host the PDF elsewhere and update `cvUrl` in `src/data.ts`.
 
 ## Deploy elsewhere

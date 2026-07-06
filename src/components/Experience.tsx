@@ -23,7 +23,7 @@ export default function Experience() {
               <article className="relative sm:pl-10">
                 <div className="absolute top-2 left-0 hidden h-3.5 w-3.5 rounded-full border-2 border-teal-500 bg-white sm:block dark:bg-slate-950" />
 
-                <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 dark:border-slate-800 dark:bg-slate-900">
+                <div>
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
                       <h3 className="font-display text-xl font-bold text-slate-900 dark:text-white">

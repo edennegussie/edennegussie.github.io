@@ -1,6 +1,6 @@
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
-import { certifications, drive, profile, strengths } from "../data";
+import { drive, profile, strengths } from "../data";
 
 export default function About() {
   return (
@@ -9,7 +9,7 @@ export default function About() {
         <SectionHeading
           eyebrow="About"
           title="About me"
-          description="A full-stack developer keen to contribute to organizations that use technology to drive social impact, with most of my career spent building software for humanitarian field operations."
+          // description="A full-stack developer keen to contribute to organizations that use technology to drive social impact, with most of my career spent building software for humanitarian field operations."
         />
 
         <div className="grid gap-12 lg:grid-cols-5">
@@ -20,20 +20,9 @@ export default function About() {
             <p className="mt-5 text-lg leading-relaxed text-slate-600 text-justify dark:text-slate-400">
               {profile.summarySecondary}
             </p>
-
-            <div className="mt-8 rounded-2xl border border-slate-200 bg-gradient-to-br from-teal-50/60 via-white to-purple-50/60 p-6 dark:border-slate-800 dark:from-teal-950/20 dark:via-slate-900 dark:to-purple-950/20">
-              <h3 className="font-display text-lg font-bold text-slate-900 dark:text-white">
-                {drive.heading}
-              </h3>
-              {drive.body.map((paragraph) => (
-                <p
-                  key={paragraph}
-                  className="mt-3 text-base leading-relaxed text-slate-600 text-justify dark:text-slate-400"
-                >
-                  {paragraph}
-                </p>
-              ))}
-            </div>
+            <p className="mt-5 text-lg leading-relaxed text-slate-600 text-justify dark:text-slate-400">
+              {drive.body.join(" ")}
+            </p>
           </Reveal>
 
           <Reveal delay={0.1} className="lg:col-span-2">
@@ -55,25 +44,6 @@ export default function About() {
           </Reveal>
         </div>
 
-        {certifications.length > 0 && (
-          <Reveal delay={0.15}>
-            <div className="mt-12">
-              <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-slate-500">
-                Certifications & awards
-              </h3>
-              <ul className="flex flex-wrap gap-2">
-                {certifications.map((cert) => (
-                  <li
-                    key={cert}
-                    className="rounded-lg border border-slate-200 px-3 py-1.5 text-sm text-slate-700 dark:border-slate-700 dark:text-slate-300"
-                  >
-                    {cert}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
-        )}
       </div>
     </section>
   );

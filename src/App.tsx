@@ -1,7 +1,7 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Education from "./components/Education";
 import Experience from "./components/Experience";
-import Focus from "./components/Focus";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -15,10 +15,10 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Projects />
-        <Experience />
         <Skills />
-        <Focus />
+        <Experience />
+        <Projects />
+        <Education />
         <Contact />
       </main>
       <Footer />

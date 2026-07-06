@@ -6,86 +6,69 @@ export const profile = {
   phone: "+251 911 815 359",
   altPhone: "+1 623 239 2406",
   linkedin: "https://www.linkedin.com/in/eden-mekuria",
-  cvUrl: "/CV_Eden_SoftwareDeveloper.pdf",
+  cvUrl: "/EdenCV.pdf",
   tagline:
-    "I'm a full-stack developer driven by social impact. For over 8 years I've built data-driven web applications for the humanitarian sector, and I'm now exploring how AI can push that impact further, across new problems and new sectors.",
+    "I'm a full-stack developer driven by social impact. For over 8 years, I've built data-driven web applications for the humanitarian sector; now, exploring how to push that impact further, across new problems and new sectors, while experimenting with AI.",
   summary:
-    "I'm a full-stack software developer with over 8 years of hands-on experience designing and implementing data-driven web applications for the humanitarian sector. I build scalable backend services and responsive front-end interfaces with TypeScript, JavaScript, React, Angular, .NET, Node.js, Python, and PHP, and I'm comfortable across SQL, SOQL, and NoSQL databases for data management, optimization, and cross-platform synchronization. I specialize in M&E and grants management apps, but I adapt quickly to new projects and enjoy delivering high-quality solutions.",
+    `I am a skilled Software Developer with over 8 years of experience in the design, implementation, and maintenance of web applications; specializing
+     in Full-stack web development. I build scalable backend services and responsive front-end interfaces with TypeScript, JavaScript, React, Angular,
+      .NET, Node.js, Python, and PHP. I'm proficient in database tools such as PostgreSQL & MySQL to support data management, optimization, and cross-platform 
+      synchronization. I specialize in Monotoring and Evaluation (M&E), Grants Management System and Sponsorship apps; but I am able to adapt quickly to new projects and deliver high-quality solutions.`,
   summarySecondary:
-    "My work covers the full lifecycle: developing new features, building responsive interfaces, backend services and APIs, designing database schemas, writing queries and ETL, troubleshooting and fixing bugs, writing tests, ensuring data security and integrity, and managing releases and deployment. Along the way I've worked closely with architects, business analysts, stakeholders, project managers, QAs, and fellow developers, and I've acted as team leader on several occasions. I also embrace AI-enabled tools like Cursor and Copilot to improve productivity and code quality, while keeping strong governance, security, and architectural discipline.",
+    `My work covers the full lifecycle: developing new features, building responsive interfaces, backend services and APIs, designing database 
+    schemas, writing queries and ETL, troubleshooting and fixing bugs, writing tests, ensuring data security and integrity, and managing releases
+     and deployment. Along the way I've worked closely with architects, business analysts, stakeholders, project managers, QAs, and fellow 
+     developers. Recently, I've been exploring AI to build AI-powered applications. I also embrace AI-enabled tools like Cursor and Copilot to improve
+      productivity and code quality, while keeping strong governance, security, and architectural discipline.`,
 };
 
 export const drive = {
   heading: "What drives me",
-  body: [
-    "I got into software because I wanted my work to matter. For most of my career that has meant humanitarian and social-impact organizations, building the systems that help field teams collect data, manage grants, and reach the people they serve.",
-    "That mission still sits at my core. I've also learned that the skills behind good social-impact software, like reliability, data integrity, thoughtful UX, and now AI, travel well. I'm curious to explore new sectors and harder problems, and to keep pairing that curiosity with tools like AI to build things that genuinely help people.",
-  ],
+  body: [`I am driven by work that improves societal well-being and livelihoods. For most of my career, that has meant contributing to technical 
+    solutions for humanitarian organizations; i.e. developing systems that support field programs and help reach communities. That said, I am open
+     to new industries and to tackling different sets of challenges.`
+      ],
 };
-
-export type FocusArea = {
-  icon: "heart" | "sparkles" | "compass";
-  title: string;
-  body: string;
-};
-
-export const focusAreas: FocusArea[] = [
-  {
-    icon: "heart",
-    title: "Social impact at the core",
-    body: "8+ years building for humanitarian and mission-driven organizations. I like problems where shipping good software has a real, human payoff.",
-  },
-  {
-    icon: "sparkles",
-    title: "Building with AI",
-    body: "Exploring AI as both a way to work, with Cursor and Copilot, and as a product capability, from computer vision to automated QA agents.",
-  },
-  {
-    icon: "compass",
-    title: "Open to new sectors",
-    body: "Rooted in impact, but curious beyond it. I adapt quickly to new domains and want to bring reliable, data-driven engineering to fresh problems.",
-  },
-];
-
-export const sectors: string[] = [
-  "Humanitarian / INGO",
-  "Sponsorship & grants",
-  "AI & automation",
-  "Health tech",
-  "IT consultancy",
-  "ERP / HR systems",
-  "R&D",
-  "Agriculture tech",
-];
 
 export const skills: { group: string; items: string[] }[] = [
   {
     group: "Languages",
-    items: ["TypeScript", "JavaScript", "Python", "C#", "PHP"],
+    items: ["JavaScript", "TypeScript", "C#", "Python", "PHP"],
   },
   {
     group: "Frontend",
-    items: ["React", "Next.js", "Angular", "AngularJS", "Tailwind CSS", "React Query"],
+    items: ["React", "Angular", "AngularJS", "Tailwind CSS"],
   },
   {
     group: "Backend",
-    items: ["Node.js", "Express", ".NET", "Laravel", "REST APIs", "Prisma"],
+    items: [".NET Core", "Node.js", "PHP (Laravel)"],
   },
   {
     group: "Databases",
-    items: ["PostgreSQL", "MySQL", "MS SQL", "MongoDB", "SOQL", "Databricks"],
+    items: ["PostgreSQL", "MySQL", "MongoDB", "SOQL", "Databricks"],
   },
   {
-    group: "Data & Integrity",
-    items: ["Data validation", "Reconciliation", "Cross-platform sync", "ETL", "Data governance"],
+    group: "Cloud & DevOps",
+    items: ["Google Cloud Platform", "Docker", "Azure Cloud Services", "CI/CD (Bitbucket Pipelines)"],
   },
   {
-    group: "AI & Automation",
-    items: ["OpenAI", "Playwright", "Azure AI Vision", "Prompt Engineering", "Cursor", "Copilot"],
+    group: "CRM",
+    items: ["Salesforce CRM", "Apex", "LWC", "SOQL"],
   },
   {
-    group: "Platforms & DevOps",
-    items: ["Docker", "Salesforce", "Azure", "Git & Bitbucket", "CI/CD", "Boomi"],
+    group: "Tools & Practices",
+    items: [
+      "Jira",
+      "Git/GitHub/Bitbucket",
+      "Postman",
+      "Cursor",
+      "Claude & Copilot (AI-assisted development)",
+      "Windows/Linux OS",
+      "Agile-Scrum",
+      "RESTful APIs",
+      "Confluence documentation",
+      "Figma",
+    ],
   },
 ];
 
@@ -173,7 +156,7 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    role: "ICT Senior Officer, Software Developer",
+    role: "Software Developer",
     company: "Food for the Hungry Inc.",
     sector: "International NGO",
     period: "Apr 2019 to Present",
@@ -239,15 +222,17 @@ export const education = [
 ];
 
 export const certifications = [
-  "freeCodeCamp, JavaScript Algorithms and Data Structures",
-  "Outstanding International Student Award (participant)",
-  "Academic Achievement Awards, 2nd class winner",
+  {
+    degree: "Certification - JavaScript Algorithms and Data Structures",
+    school: "freeCodeCamp",
+    detail: "July 2022",
+  },
 ];
 
 export const strengths = [
   {
-    title: "UI/UX & API development",
-    body: "I build responsive, accessible front-end interfaces and design the backend services and REST APIs that power them, from database schema to endpoint.",
+    title: "Web app development",
+    body: `I develop and maintain enterprise web applications covering UI/UX, APIs, and databases; and implementing new features, enhancing functionality, writing test scripts, fixing bugs, and managing releases.` 
   },
   {
     title: "Data integrity",
@@ -260,10 +245,6 @@ export const strengths = [
   {
     title: "AI-assisted development",
     body: "I use Cursor and Copilot to work more productively while keeping governance, security, and architecture in mind.",
-  },
-  {
-    title: "Cross-cultural collaboration",
-    body: "I have worked with diverse teams both remotely and in person, across a wide range of cultural backgrounds.",
   },
   {
     title: "Adaptable and self-driven",
