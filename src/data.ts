@@ -288,7 +288,7 @@ export const experiences: Experience[] = [
   {
     role: "Front-end Developer",
     company: "Zerihun Associates Plc.",
-    sector: "IT Consultancy, Addis Ababa, Ethiopia",
+    sector: "IT Consultancy",
     period: "Sep 2018 to Apr 2019",
     projects: ["Z-PlusERP"],
     points: [

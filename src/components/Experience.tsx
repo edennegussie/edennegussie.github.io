@@ -37,7 +37,7 @@ export default function Experience() {
                       </p>
                       <p className="mt-2 text-base leading-relaxed text-slate-600 dark:text-slate-400">
                         <span className="font-semibold text-slate-900 dark:text-white">
-                          Projects:
+                          {exp.projects.length === 1 ? "Project:" : "Projects:"}
                         </span>{" "}
                         {exp.projects.join(", ")}
                       </p>
@@ -47,9 +47,6 @@ export default function Experience() {
                     </time>
                   </div>
 
-                  <h4 className="mt-5 text-base font-semibold text-purple-600 dark:text-purple-400">
-                    Responsibilities
-                  </h4>
                   <ul className="mt-3 space-y-2.5">
                     {exp.points.map((point) => (
                       <li
