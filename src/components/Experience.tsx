@@ -35,34 +35,32 @@ export default function Experience() {
                           , {exp.sector}
                         </span>
                       </p>
+                      <p className="mt-2 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+                        <span className="font-semibold text-slate-900 dark:text-white">
+                          Projects:
+                        </span>{" "}
+                        {exp.projects.join(", ")}
+                      </p>
                     </div>
-                    <time className="shrink-0 text-sm font-medium text-slate-500 dark:text-slate-400">
+                    <time className="shrink-0 text-base font-medium italic text-slate-500 dark:text-slate-400">
                       {exp.period}
                     </time>
                   </div>
 
-                  <ul className="mt-5 space-y-2.5">
+                  <h4 className="mt-5 text-base font-semibold text-purple-600 dark:text-purple-400">
+                    Responsibilities
+                  </h4>
+                  <ul className="mt-3 space-y-2.5">
                     {exp.points.map((point) => (
                       <li
                         key={point}
-                        className="flex items-start gap-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400"
+                        className="flex items-start gap-2 text-base leading-relaxed text-slate-600 dark:text-slate-400"
                       >
                         <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-orange-500" />
                         {point}
                       </li>
                     ))}
                   </ul>
-
-                  <div className="mt-5 flex flex-wrap gap-1.5">
-                    {exp.stack.map((tech) => (
-                      <span
-                        key={tech}
-                        className="rounded-md bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-400"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </article>
             </Reveal>

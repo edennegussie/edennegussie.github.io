@@ -39,9 +39,11 @@ export default function Education() {
                   <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
                     {cert.school}
                   </p>
-                  <p className="mt-1 text-sm font-medium text-teal-600 dark:text-teal-400">
-                    {cert.detail}
-                  </p>
+                  {"detail" in cert && cert.detail && (
+                    <p className="mt-1 text-sm font-medium text-teal-600 dark:text-teal-400">
+                      {cert.detail}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>

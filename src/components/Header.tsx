@@ -15,6 +15,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [dark, setDark] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState(links[0].href);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
@@ -29,6 +30,33 @@ export default function Header() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const sections = links
+      .map((link) => document.querySelector(link.href))
+      .filter((section): section is Element => Boolean(section));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        const activeId = visibleSections[0]?.target.id;
+        if (activeId) {
+          setActiveSection(`#${activeId}`);
+        }
+      },
+      {
+        rootMargin: "-35% 0px -50% 0px",
+        threshold: [0.1, 0.25, 0.5, 0.75],
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
   }, []);
 
   const toggleTheme = () => {
@@ -57,15 +85,24 @@ export default function Header() {
         </a>
 
         <nav className="hidden items-center gap-1 md:flex">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="rounded-lg px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white"
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) => {
+            const isActive = activeSection === link.href;
+
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`rounded-lg px-3 py-2 text-sm font-medium transition ${
+                  isActive
+                    ? "bg-teal-50 text-teal-700 dark:bg-teal-950/50 dark:text-teal-300"
+                    : "text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white"
+                }`}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-2">
@@ -100,16 +137,25 @@ export default function Header() {
       {open && (
         <nav className="border-t border-slate-200 bg-white px-5 py-4 md:hidden dark:border-slate-800 dark:bg-slate-950">
           <div className="flex flex-col gap-1">
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={closeMenu}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300"
-              >
-                {link.label}
-              </a>
-            ))}
+            {links.map((link) => {
+              const isActive = activeSection === link.href;
+
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMenu}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`rounded-lg px-3 py-2.5 text-sm font-medium ${
+                    isActive
+                      ? "bg-teal-50 text-teal-700 dark:bg-teal-950/50 dark:text-teal-300"
+                      : "text-slate-700 dark:text-slate-300"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
             <a
               href={profile.cvUrl}
               download

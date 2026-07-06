@@ -119,6 +119,7 @@ export const projects: Project[] = [
       "REST APIs",
       "Figma",
     ],
+    link: "https://fhecosystem.com/",
   },
   {
     name: "AiQA",
@@ -183,6 +184,67 @@ export const projects: Project[] = [
       "Salesforce Flow",
       "Salesforce Data Loader",
     ],
+    link: "https://foodforthehungry.lightning.force.com/one/one.app",
+  },
+  {
+    name: "Z-PlusERP",
+    tagline: "ERP, HR, payroll, and attendance management",
+    description:
+      "A web-based ERP application integrating Human Resources, Payroll, and Attendance management systems.",
+    tags: [
+      "TypeScript",
+      "Angular 6",
+      "Node.js",
+      "Angular Material",
+      "HTML5/CSS3",
+      "RESTful APIs",
+      "Git",
+    ],
+  },
+  {
+    name: "I/O Simulator",
+    tagline: "Microcontroller input/output simulator",
+    description:
+      "A simulator to visualize microcontroller (uC) input/output behavior for testing and demonstration purposes.",
+    tags: [
+      "C#",
+      ".NET",
+      "C",
+      "Windows Forms/WPF",
+      "Proteus",
+      "Multisim",
+      "Visual Studio",
+    ],
+  },
+  {
+    name: "Thermostat",
+    tagline: "Agricultural temperature monitoring device",
+    description:
+      "A device that detects and displays temperature change in real time for agricultural monitoring applications.",
+    tags: [
+      "C (Embedded C)",
+      "Thermocouple",
+      "LCD",
+      "MCU",
+      "ADC",
+      "Proteus",
+      "Multisim",
+      "PCB Design",
+    ],
+  },
+  {
+    name: "MedElert",
+    tagline: "Tele-health medication scheduling portal",
+    description:
+      "A tele-health web application enabling doctors and pharmacists to remotely set medication schedules on pill dispensers, alerting caregivers if patients miss doses.",
+    tags: [
+      "JavaScript",
+      "AngularJS",
+      "HTML5/CSS3",
+      "Bootstrap",
+      "RESTful APIs",
+      "Git",
+    ],
   },
 ];
 
@@ -191,60 +253,81 @@ export type Experience = {
   company: string;
   sector: string;
   period: string;
+  projects: string[];
   points: string[];
-  stack: string[];
 };
 
 export const experiences: Experience[] = [
   {
     role: "Software Developer",
     company: "Food for the Hungry Inc.",
-    sector: "International NGO",
+    sector: "INGO, USA, Remote",
     period: "Apr 2019 to Present",
-    points: [
-      "Develop, maintain, and deploy enterprise web applications (Worldlink, OVAS, Vision), including new features, UX improvements, troubleshooting, and bug fixes.",
-      "Built ExportEd, a custom Salesforce ETL middleware that saved the organization over $10,000 per year.",
-      "Built AiQA, an AI-powered QA agent using Playwright and OpenAI to automate review of sponsor correspondence.",
-      "Ensured accurate and reliable Sponsorship, Child, and Media data by validating datasets, resolving discrepancies, and running daily synchronization across three platforms.",
-      "Optimized Worldlink performance by reducing file sizes, using caching techniques, and implementing lazy loading.",
-      "Delivered Salesforce solutions with Apex and LWC, and integrated Power BI for data visualization and informed decision making.",
+    projects: [
+      "Worldlink",
+      "Ecosystem",
+      "AiQA",
+      "Vision",
+      "OVAS",
+      "ExportEd",
+      "Salesforce CRM",
     ],
-    stack: ["React", "Angular", "Node.js", "Laravel", "Salesforce", "Azure", "Docker"],
+    points: [
+      "Design, develop, and maintain enterprise web applications, delivering responsive frontends, backend systems, and APIs; implementing new features and enhancing existing functionality, writing test scripts, fixing bugs, managing releases and deployment.",
+      "Implement APIs, middleware, and integrations for data addressing data integrity issues across internal platforms such as WL3, Ecosystem and Salesforce.",
+      "Design and optimize relational databases (MySQL, PostgreSQL, MSSQL), implement ETL processes, and ensure data accuracy across systems.",
+      "Validate Sponsor, Sponsorship, Participant, Area, and Media datasets on a daily and weekly basis to ensure data accuracy, consistency, and completeness.",
+      "Conduct technical research for new marketplace platform initiatives by analyzing Business Requirements Documents (BRDs), generating proof-of-concepts (PoCs), building prototypes, and Minimum Viable Products (MVPs), validating technical feasibility, user workflows, and solution approaches prior to full-scale development.",
+      "Manage deployments via Bitbucket Pipelines and Docker; maintain technical documentation in Confluence.",
+      "Lead UI/UX design efforts for new initiatives such as Ecosystem, building wireframes, and defining functional requirements in collaboration with stakeholders.",
+      "Deliver Salesforce solutions by implementing Apex changes and LWC enhancements to improve functionality, user interface and experience.",
+      "Participate in Agile/Scrum ceremonies (sprint planning, stand-ups, retrospectives) and collaborate cross-functionally with M&E, program, and donor-relations teams to gather and refine requirements.",
+      "Conduct code reviews and uphold coding standards; monitor production systems and respond to incidents.",
+    ],
   },
   {
     role: "Front-end Developer",
     company: "Zerihun Associates Plc.",
-    sector: "IT Consultancy",
+    sector: "IT Consultancy, Addis Ababa, Ethiopia",
     period: "Sep 2018 to Apr 2019",
+    projects: ["Z-PlusERP"],
     points: [
-      "Developed a web-based ERP application called Z-plusERP, integrating Human Resources, Payroll, and Attendance management.",
-      "Set up the initial design elements, tech stack, and repository structure for the application.",
-      "Developed responsive UIs, created unit tests, added feature-specific components, and contributed to the REST API.",
+      "Developed responsive UIs and reusable, feature-specific components.",
+      "Created unit tests to validate component and feature behavior.",
+      "Contributed to the design and implementation of REST APIs consumed by the frontend.",
+      "Identified and resolved bugs across the application.",
+      "Prepared technical documentation and user manuals.",
+      "Collaborated with backend developers and participated in Agile/Scrum ceremonies (sprint planning, stand-ups).",
+      "Used Git for version control and participated in code reviews within the team.",
     ],
-    stack: ["TypeScript", "Angular 6", "Node.js"],
   },
   {
     role: "Software Developer",
     company: "Advanced Defense Concepts (ADC) R&D",
-    sector: "Research & Development",
+    sector: "R&D",
     period: "Feb 2015 to Aug 2016",
+    projects: ["I/O Simulator", "Thermostat"],
     points: [
-      "Developed microcontroller-based applications used in the agriculture sector.",
-      "Led the integration of different submodules to form an automated cohesive system.",
-      "Built web portals for controller-based applications and designed PCB layouts.",
+      "Developed a web portal for controller-based applications.",
+      "Programmed ICs and microcontrollers, including LCDs, thermostats, and inverters.",
+      "Designed schematics for various electrical devices and PCB layouts.",
+      "Wrote and tested embedded firmware, and debugged/validated circuits on the bench.",
+      "Documented hardware-software interface specifications and collaborated with hardware engineers on system integration.",
     ],
-    stack: ["C", "C#", ".NET"],
   },
   {
     role: "Frontend Developer",
     company: "iCogLabs",
-    sector: "Research & Development",
+    sector: "R&D",
     period: "Nov 2014 to Feb 2015",
+    projects: ["MedElert"],
     points: [
-      "Developed the web portal for MedElert, a tele-health project that enabled remote medication scheduling on pill-dispensers.",
-      "Translated mock-ups into UI, collaborated with backend developers, and tested the application.",
+      "Developed the web portal for the MedElert platform.",
+      "Debugged and addressed issues across the application.",
+      "Translated design mock-ups into functional UI.",
+      "Collaborated closely with backend developers on API integration.",
+      "Manually tested the application, including cross-browser and responsive-layout checks.",
     ],
-    stack: ["JavaScript", "AngularJS", "REST"],
   },
 ];
 
@@ -262,11 +345,10 @@ export const education = [
   },
 ];
 
-export const certifications = [
+export const certifications: { degree: string; school: string; detail?: string }[] = [
   {
     degree: "Certification - JavaScript Algorithms and Data Structures",
     school: "freeCodeCamp",
-    detail: "July 2022",
   },
 ];
 
