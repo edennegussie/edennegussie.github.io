@@ -72,8 +72,8 @@ export default function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-slate-200/80 bg-white/80 backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/80"
-          : "bg-transparent"
+          ? "border-b border-slate-200 bg-white md:border-slate-200/80 md:bg-white/80 md:backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950 md:dark:border-slate-800/80 md:dark:bg-slate-950/80"
+          : "bg-white dark:bg-slate-950 md:bg-transparent md:dark:bg-transparent"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
@@ -135,7 +135,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-slate-200 bg-white/95 px-4 py-2.5 shadow-xl shadow-slate-900/10 backdrop-blur-md md:hidden dark:border-slate-800 dark:bg-slate-950/95 dark:shadow-black/30">
+        <nav className="border-t border-slate-200 bg-white px-4 py-2.5 shadow-xl shadow-slate-900/10 md:hidden dark:border-slate-800 dark:bg-slate-950 dark:shadow-black/30">
           <div className="flex flex-col gap-0.5">
             {links.map((link) => {
               const isActive = activeSection === link.href;

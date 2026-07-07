@@ -371,6 +371,6 @@ export const strengths = [
   },
   {
     title: "Adaptable and self-driven",
-    body: "I pick up new technologies and frameworks quickly and i'm am able to deliver efficient solutions.",
+    body: "I pick up new technologies and frameworks quickly and able to deliver efficient solutions.",
   },
 ];
