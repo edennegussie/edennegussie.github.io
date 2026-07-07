@@ -363,7 +363,7 @@ export const strengths = [
   },
   {
     title: "Attention to detail",
-    body: "I have a keen eye for detail, which helps me maintain high code quality and identify and resolve bugs effectively.",
+    body: "I have a keen eye for detail, which helps me maintain high code quality, as well as identify and resolve bugs effectively.",
   },
   {
     title: "AI-assisted development",
@@ -371,6 +371,6 @@ export const strengths = [
   },
   {
     title: "Adaptable and self-driven",
-    body: "I pick up new technologies and frameworks quickly and have acted as team leader on several occasions.",
+    body: "I pick up new technologies and frameworks quickly and i'm am able to deliver efficient solutions.",
   },
 ];

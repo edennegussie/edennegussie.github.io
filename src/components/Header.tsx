@@ -135,8 +135,8 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-slate-200 bg-white px-5 py-4 md:hidden dark:border-slate-800 dark:bg-slate-950">
-          <div className="flex flex-col gap-1">
+        <nav className="border-t border-slate-200 bg-white/95 px-4 py-2.5 shadow-xl shadow-slate-900/10 backdrop-blur-md md:hidden dark:border-slate-800 dark:bg-slate-950/95 dark:shadow-black/30">
+          <div className="flex flex-col gap-0.5">
             {links.map((link) => {
               const isActive = activeSection === link.href;
 
@@ -146,7 +146,7 @@ export default function Header() {
                   href={link.href}
                   onClick={closeMenu}
                   aria-current={isActive ? "page" : undefined}
-                  className={`rounded-lg px-3 py-2.5 text-sm font-medium ${
+                  className={`rounded-md px-2.5 py-1.5 text-sm font-medium ${
                     isActive
                       ? "bg-teal-50 text-teal-700 dark:bg-teal-950/50 dark:text-teal-300"
                       : "text-slate-700 dark:text-slate-300"
@@ -160,7 +160,7 @@ export default function Header() {
               href={profile.cvUrl}
               download
               onClick={closeMenu}
-              className="mt-2 rounded-lg bg-teal-500 px-3 py-2.5 text-center text-sm font-semibold text-white"
+              className="mt-1.5 rounded-md bg-teal-500 px-2.5 py-1.5 text-center text-sm font-semibold text-white"
             >
               Download CV
             </a>
